@@ -7,7 +7,7 @@ from pytdbot import Client, types
 from src import db
 from src.helpers import get_string, LangsButtons
 from src.modules.utils import Filter
-from src.modules.utils.admins import is_owner
+from src.modules.utils.admins import is_admin
 
 
 @Client.on_message(filters=Filter.command(["lang", "setlang"]))
@@ -23,8 +23,8 @@ async def handle_language_cb(_: Client, message: types.UpdateNewCallbackQuery) -
     user_id = message.sender_user_id
     lang_code = data.split("_", 1)[1]
 
-    if chat_id < 0 and not await is_owner(chat_id, user_id):
-        await message.answer(get_string("only_owner", lang_code), show_alert=True)
+    if chat_id < 0 and not await is_admin(chat_id, user_id):
+        await message.answer(get_string("only_admin", lang_code), show_alert=True)
         return None
 
     await message.answer("Processing...")
