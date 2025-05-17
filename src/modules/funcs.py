@@ -6,6 +6,7 @@ import re
 from typing import Union
 
 from pytdbot import Client, types
+from src import *
 
 from src.helpers import call, db, get_string
 from src.helpers import chat_cache
