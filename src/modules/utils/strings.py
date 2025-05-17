@@ -4,7 +4,7 @@
 
 
 PmStartText = """
-Hey {0}, 🥀
+Hey {0}, 
 
 Welcome to <b>{1}</b>!
 Version: <b>v{2}</b>
@@ -15,7 +15,7 @@ A fast, reliable and powerful Telegram music bot built with amazing features.
 """
 
 StartText = """
-<b>Hello {0}, 🥀</b>
+<b>Hello {0},</b>
 
 <b>{1}</b> is now active and ready to play music! 🔊
 
